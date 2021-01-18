@@ -2,7 +2,7 @@ import {
   HeaderContainer,
   LogoImage,
   ProfileWrapper
-} from "styles/Header.style";
+} from "components/Header/Header.style";
 import logo from "assets/logo.svg";
 import profilePic from "assets/profile.svg";
 
@@ -12,7 +12,7 @@ function Header() {
       <LogoImage src={logo} alt="Shopping.com" />
       <ProfileWrapper>
         <img src={profilePic} alt="User" />
-        <span>Joana Novaz</span>
+        <span>John Doe</span>
       </ProfileWrapper>
     </HeaderContainer>
   );

@@ -8,6 +8,8 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   background: #ffff;
+
+  margin-bottom: 1em;
 `;
 
 const LogoImage = styled.img`
