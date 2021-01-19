@@ -3,8 +3,8 @@ import productImage from "assets/product.png";
 
 const ProductCardContainer = styled.div`
   width: 12em;
-  background: #ffff;
-  border-radius: 15px 15px 15px 15px;
+  background: #fdfcfa;
+  border-radius: 15px;
 `;
 
 const ProductImage = styled.div`
@@ -40,9 +40,14 @@ const ProductCardButton = styled.button`
   background: #fc7515;
   color: #ffff;
   border: none;
-  text-transform: uppercase;
   border-radius: 0 0 15px 15px;
+  text-transform: uppercase;
+  font-weight: 700;
   margin-top: 1em;
+
+  &:hover {
+    background: #f49f64;
+  }
 `;
 
 export {
