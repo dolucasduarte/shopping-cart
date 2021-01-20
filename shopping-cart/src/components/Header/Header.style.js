@@ -9,7 +9,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   background: #ffff;
 
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 `;
 
 const LogoImage = styled.img`

@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { getProducts } from "services/get";
 import { ProductsFeedWrapper } from "components/ProductFeed/ProductsFeed.style";
 import ProductCard from "../ProductCard/ProductCard";
@@ -12,7 +12,7 @@ function ProductsFeed() {
     });
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     getProducts(setProducts);
   }, []);
 

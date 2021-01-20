@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ShoppingCartContainer = styled.div`
-  width: 25em;
+  min-width: 23em;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -17,4 +17,15 @@ const ShoppingCartHeader = styled.div`
   justify-content: center;
 `;
 
-export { ShoppingCartContainer, ShoppingCartHeader };
+const RowContainer = styled.div`
+  height: 3em;
+  border-top: 1px solid #b6b6b6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em 0 0.5em;
+  color: #656565;
+`;
+
+export { ShoppingCartContainer, ShoppingCartHeader, RowContainer };

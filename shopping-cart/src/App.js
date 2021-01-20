@@ -1,14 +1,20 @@
-import Home from "pages/Home";
+import CartProvider from "context/CartItens";
 import Header from "components/Header/Header";
+import PageWrapper from "./App.style";
+import ProductFeed from "components/ProductFeed/ProductsFeed";
+import ShoppingCart from "components/ShoppingCart/ShoppingCart";
 import GlobalStyles from "GlobalStyles";
 
 function App() {
   return (
-    <div>
+    <CartProvider>
       <Header />
-      <Home />
+      <PageWrapper>
+        <ProductFeed />
+        <ShoppingCart />
+      </PageWrapper>
       <GlobalStyles />
-    </div>
+    </CartProvider>
   );
 }
 

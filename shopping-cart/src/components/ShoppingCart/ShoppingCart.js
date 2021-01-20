@@ -3,7 +3,10 @@ import {
   ShoppingCartHeader
 } from "./ShoppingCart.style";
 import VoucherForm from "./VoucherForm/VoucherForm";
-import CalculationRow from "./CalculationRow/CalculationRow";
+import SubtotalRow from "./SubtotalRow/SubtotalRow";
+import CalculationRow from "./CalculationRows/CalculationRow";
+import CartItens from "./CartItens/CartItens";
+import ShippingRow from "./ShippingRow/ShippingRow";
 
 function ShoppingCart() {
   return (
@@ -11,11 +14,10 @@ function ShoppingCart() {
       <ShoppingCartHeader>
         <h2>Shopping Cart</h2>
       </ShoppingCartHeader>
+      <CartItens />
       <VoucherForm />
-      <CalculationRow title="Subtotal" value="234" />
-      <CalculationRow title="Shipping" value="10" />
-      <CalculationRow title="Discount" value="1" />
-      <CalculationRow title="Total" value="243" />
+      <SubtotalRow />
+      <ShippingRow />
     </ShoppingCartContainer>
   );
 }

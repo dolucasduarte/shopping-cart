@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import productImage from "assets/product.png";
 
 const ProductCardContainer = styled.div`
@@ -48,6 +48,16 @@ const ProductCardButton = styled.button`
   &:hover {
     background: #f49f64;
   }
+
+  ${props =>
+    props.outOfStock &&
+    css`
+      background: #656565;
+      &:hover {
+        background: #656565;
+        cursor: not-allowed;
+      }
+    `}
 `;
 
 export {
