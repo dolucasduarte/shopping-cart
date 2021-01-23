@@ -7,4 +7,4 @@ function useCart() {
   return { cartItens, setCartItens };
 }
 
-export { useCart };
+export default useCart;

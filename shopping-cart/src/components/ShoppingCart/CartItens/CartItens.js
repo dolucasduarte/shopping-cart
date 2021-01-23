@@ -6,8 +6,9 @@ import {
   ItemTitle,
   ItemDetails
 } from "./CartItens.style";
-import QuantityBar from "./QuantityBar/QuantityBar";
-import { useCart } from "hooks/useCart";
+import ItemSideBar from "./ItemSideBar/ItemSideBar";
+import useCart from "hooks/useCart";
+import handleMoney from "utils/handleMoney";
 
 function CartItens() {
   const { cartItens } = useCart();
@@ -21,10 +22,10 @@ function CartItens() {
             <ItemTitle>{item.product.name} </ItemTitle>
             <ItemDetails>
               <span>Quantity: {item.quantity} kg</span>
-              <strong>${item.product.price * item.quantity}</strong>
+              <strong>{handleMoney(item.product.price * item.quantity)}</strong>
             </ItemDetails>
           </ItemContent>
-          <QuantityBar cartItem={item} />
+          <ItemSideBar item={item} />
         </CartItemContainer>
       );
     });

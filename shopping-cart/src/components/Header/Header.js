@@ -12,7 +12,7 @@ function Header() {
       <LogoImage src={logo} alt="Shopping.com" />
       <ProfileWrapper>
         <img src={profilePic} alt="User" />
-        <span>John Doe</span>
+        <span>Guest</span>
       </ProfileWrapper>
     </HeaderContainer>
   );

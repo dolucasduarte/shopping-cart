@@ -2,30 +2,20 @@ import styled from "styled-components";
 
 const ShoppingCartContainer = styled.div`
   min-width: 23em;
+  background: #fdfcfa;
   border-radius: 15px;
+  box-shadow: 6px 7px 6px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  background: #fdfcfa;
 `;
 
 const ShoppingCartHeader = styled.div`
   width: 100%;
-  background: #fc7515;
+  background: #ff7149;
   border-radius: 15px 15px 0 0;
   color: #ffff;
   display: flex;
   justify-content: center;
 `;
 
-const RowContainer = styled.div`
-  height: 3em;
-  border-top: 1px solid #b6b6b6;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.5em 0 0.5em;
-  color: #656565;
-`;
-
-export { ShoppingCartContainer, ShoppingCartHeader, RowContainer };
+export { ShoppingCartContainer, ShoppingCartHeader };

@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
+const DiscountFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const DiscountForm = styled.form`
   box-sizing: border-box;
   width: 100%;
   height: 2.3em;
   padding-left: 1em;
   padding-right: 1em;
-  margin: 1em 0 1em 0;
   display: flex;
   align-self: center;
+  margin-bottom: 0.5em;
 `;
 
 const VoucherInput = styled.input`
@@ -22,15 +27,29 @@ const VoucherInput = styled.input`
 
 const VoucherButton = styled.button`
   width: 25%;
-  background: #fc7515;
+  background: #ff7149;
   color: #ffff;
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
 
   &:hover {
-    background: #f49f64;
+    background: #ff9375;
   }
 `;
 
-export { DiscountForm, VoucherInput, VoucherButton };
+const MessageContainer = styled.div`
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-bottom: 1.3em;
+  margin-left: 1.5em;
+  color: #565656;
+`;
+
+export {
+  DiscountFormContainer,
+  DiscountForm,
+  VoucherInput,
+  VoucherButton,
+  MessageContainer
+};

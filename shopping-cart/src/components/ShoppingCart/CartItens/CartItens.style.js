@@ -2,16 +2,16 @@ import styled from "styled-components";
 import productImage from "assets/product.png";
 
 const EmptyCart = styled.div`
-  margin: 2em;
-  text-align: center;
   color: #656565;
+  text-align: center;
+  margin: 2em;
 `;
 
 const CartItemContainer = styled.div`
-  display: flex;
   height: 4em;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
+  display: flex;
   margin: 1em;
 `;
 
@@ -27,11 +27,12 @@ const ItemImage = styled.div`
 const ItemContent = styled.div`
   box-sizing: border-box;
   width: 70%;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #2c2c2c;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-left: 1em;
-  padding-right: 1em;
 `;
 
 const ItemTitle = styled.span`
@@ -40,11 +41,11 @@ const ItemTitle = styled.span`
 
 const ItemDetails = styled.span`
   width: 100%;
+  font-weight: 400;
+  font-size: 0.8em;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-weight: 400;
-  font-size: 0.8em;
 
   strong {
     font-weight: 600;

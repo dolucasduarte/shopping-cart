@@ -1,10 +1,14 @@
+import {
+  ProductsFeedWrapper,
+  ProductsPlaceholder
+} from "components/ProductFeed/ProductsFeed.style";
+import ProductCard from "./ProductCard/ProductCard";
 import { useState, useEffect } from "react";
 import { getProducts } from "services/get";
-import { ProductsFeedWrapper } from "components/ProductFeed/ProductsFeed.style";
-import ProductCard from "../ProductCard/ProductCard";
 
 function ProductsFeed() {
   const [products, setProducts] = useState();
+  const [feedMessage, setFeedMessage] = useState("Loading ...");
 
   const renderProducts = () => {
     return products.map(product => {
@@ -13,13 +17,17 @@ function ProductsFeed() {
   };
 
   useEffect(() => {
-    getProducts(setProducts);
+    getProducts(setProducts, setFeedMessage);
   }, []);
 
   return (
-    <ProductsFeedWrapper>
-      {products && products.length > 0 && renderProducts()}
-    </ProductsFeedWrapper>
+    <div>
+      {products && products.length > 0 ? (
+        <ProductsFeedWrapper>{renderProducts()}</ProductsFeedWrapper>
+      ) : (
+        <ProductsPlaceholder>{feedMessage}</ProductsPlaceholder>
+      )}
+    </div>
   );
 }
 

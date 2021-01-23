@@ -5,12 +5,12 @@ const ProductCardContainer = styled.div`
   width: 12em;
   background: #fdfcfa;
   border-radius: 15px;
+  box-shadow: 6px 7px 6px rgba(0, 0, 0, 0.3);
 `;
 
 const ProductImage = styled.div`
   width: 100%;
   height: 8em;
-
   background-image: url(${productImage});
   background-position: center;
   background-repeat: no-repeat;
@@ -22,8 +22,8 @@ const ProductContent = styled.article`
   margin-left: 1em;
 
   h4 {
+    color: #2c2c2c;
     font-weight: 500;
-    margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
   }
@@ -37,20 +37,20 @@ const ProductContent = styled.article`
 const ProductCardButton = styled.button`
   width: 100%;
   height: 3em;
-  background: #fc7515;
-  color: #ffff;
+  background: #ff7149;
   border: none;
   border-radius: 0 0 15px 15px;
-  text-transform: uppercase;
+  color: #ffff;
   font-weight: 700;
+  text-transform: uppercase;
   margin-top: 1em;
 
   &:hover {
-    background: #f49f64;
+    background: #ff9375;
   }
 
   ${props =>
-    props.outOfStock &&
+    props.outOfStuck &&
     css`
       background: #656565;
       &:hover {

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const BarContainer = styled.div`
-  box-sizing: border-box;
   width: 10%;
   border-left: 1px solid #e5e5e5;
   display: flex;
