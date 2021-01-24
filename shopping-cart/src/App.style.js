@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PageWrapper = styled.div`
-  width: 100vw;
   display: flex;
   align-items: flex-start;
   justify-content: center;

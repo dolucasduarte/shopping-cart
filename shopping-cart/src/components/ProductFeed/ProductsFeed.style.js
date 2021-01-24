@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 const ProductsFeedWrapper = styled.div`
   box-sizing: border-box;
-
   padding-right: 2.5em;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;

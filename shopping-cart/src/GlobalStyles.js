@@ -6,7 +6,6 @@ body {
     padding: 0;
     background: #dae0e6;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-
 }
 a, button {
     cursor: pointer;
