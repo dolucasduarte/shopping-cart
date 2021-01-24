@@ -8,20 +8,19 @@ const getProducts = (setData, setErrorMessage) => {
     })
     .catch(error => {
       setErrorMessage(
-        "We had en error loading the products. Please, refresh the page"
+        "There was an error loading the products. Please, refresh the page"
       );
     });
 };
 
-const getVouchers = (setData, setErrorMessage, checkVoucher) => {
+const getVouchers = (setData, setErrorMessage) => {
   api
     .get("vouchers.json")
     .then(response => {
       setData(response.data.vouchers);
-      checkVoucher();
     })
     .catch(error => {
-      setErrorMessage("We had an error loading the vouchers. Try again!");
+      setErrorMessage("✘ There was an error loading the vouchers. Try again!");
     });
 };
 

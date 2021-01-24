@@ -19,19 +19,19 @@ const DiscountForm = styled.form`
 const VoucherInput = styled.input`
   box-sizing: border-box;
   width: 70%;
-  margin-right: 1em;
   padding-left: 1em;
   border: 1px solid #edeff1;
   border-radius: 3px;
+  margin-right: 1em;
 `;
 
 const VoucherButton = styled.button`
   width: 25%;
   background: #ff7149;
-  color: #ffff;
-  text-transform: uppercase;
   border: none;
   border-radius: 5px;
+  color: #ffff;
+  text-transform: uppercase;
 
   &:hover {
     background: #ff9375;
@@ -39,11 +39,11 @@ const VoucherButton = styled.button`
 `;
 
 const MessageContainer = styled.div`
+  color: #565656;
   font-size: 0.8em;
   font-weight: 500;
   margin-bottom: 1.3em;
   margin-left: 1.5em;
-  color: #565656;
 `;
 
 export {

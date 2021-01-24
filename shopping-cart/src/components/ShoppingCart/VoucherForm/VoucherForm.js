@@ -5,13 +5,14 @@ import {
   VoucherButton,
   MessageContainer
 } from "./VoucherForm.style";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useForm from "hooks/useForm";
 import useDiscount from "hooks/useDiscountCode";
 import { getVouchers } from "services/get";
 
 function VoucherForm() {
   const [vouchers, setVouchers] = useState([]);
+  const [submittedVoucher, setSubmittedVoucher] = useState();
   const [formMessage, setFormMessage] = useState("");
 
   const { setDiscountCode } = useDiscount();
@@ -21,18 +22,23 @@ function VoucherForm() {
 
   const submitVoucher = async event => {
     event.preventDefault();
-    await getVouchers(setVouchers, setFormMessage, checkVoucher);
+    setSubmittedVoucher(form.discountCode);
+    if (vouchers.length === 0)
+      return await getVouchers(setVouchers, setFormMessage);
   };
 
-  const checkVoucher = () => {
-    const findVoucher = vouchers.find(item => item.code === form.discountCode);
-    if (!findVoucher) {
-      setDiscountCode(form.discountCode);
-      return setFormMessage("Voucher not found");
-    }
-    setDiscountCode(findVoucher);
-    setFormMessage("Discount applied. Check voucher conditions.");
-  };
+  useEffect(() => {
+    const checkVouchers = () => {
+      const findVoucher = vouchers.find(item => item.code === submittedVoucher);
+      if (!findVoucher) {
+        setDiscountCode(submittedVoucher);
+        return setFormMessage("✘ Voucher not found");
+      }
+      setDiscountCode(findVoucher);
+      setFormMessage("✔ Discount applied. Check voucher conditions.");
+    };
+    if (vouchers.length > 0) return checkVouchers();
+  }, [vouchers, submittedVoucher, setDiscountCode]);
 
   return (
     <DiscountFormContainer>

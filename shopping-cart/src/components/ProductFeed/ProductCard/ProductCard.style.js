@@ -5,7 +5,7 @@ const ProductCardContainer = styled.div`
   width: 12em;
   background: #fdfcfa;
   border-radius: 15px;
-  box-shadow: 6px 7px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 `;
 
 const ProductImage = styled.div`

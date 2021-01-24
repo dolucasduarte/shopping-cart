@@ -16,7 +16,7 @@ function CartItens() {
   const renderItens = () => {
     return cartItens.map(item => {
       return (
-        <CartItemContainer>
+        <CartItemContainer key={item.product.id}>
           <ItemImage />
           <ItemContent>
             <ItemTitle>{item.product.name} </ItemTitle>
