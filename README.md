@@ -1,5 +1,7 @@
 # Shopping Cart
 
+fruits4you.surge.sh
+
 This project was developed entirely with React as a challenge for a front-end developer position.
 
 ## Shipping Rules
