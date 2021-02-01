@@ -1,5 +1,10 @@
 # Shopping Cart
 
+<img src="https://media.giphy.com/media/6MK5qQmpL56BGiHsip/giphy.gif">
+<sub>Fruits4You</sub>
+
+
+
 [fruits4you.surge.sh](http://fruits4you.surge.sh/)
 
 This project was developed entirely with React as a challenge for a front-end developer position.
@@ -19,3 +24,7 @@ Valid vouchers you can use to test the discount code feature:
 - **#30OFF:** percentual voucher of 30%
 - **#100DOLLARS**: fixed voucher of \$100.00
 - **#SHIPIT**: free shipping voucher with minimum value of \$300.50
+
+## Errors
+
+The API eventually fail with HTP 500 on purpose. These failures are handled in the project.
