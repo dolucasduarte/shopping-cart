@@ -1,9 +1,6 @@
 # Shopping Cart
 
 <img src="https://media.giphy.com/media/6MK5qQmpL56BGiHsip/giphy.gif">
-<sub>Fruits4You</sub>
-
-
 
 [fruits4you.surge.sh](http://fruits4you.surge.sh/)
 
